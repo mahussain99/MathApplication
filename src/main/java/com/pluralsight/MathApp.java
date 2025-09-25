@@ -76,10 +76,17 @@ public class MathApp {
         int Days = 24;
         int One_Day = 24;
         int one_hour = 60;
-        int Total_Days = (Days*One_Day);
-        int Total_Minutes = (one_hour*Total_Days);
+        int One_Minutes = 60;
+        int One_milisecond = 1000;
+
+        int Total_Days = Math.multiplyExact(Days,One_Day);
+        int Total_Minutes = Math.multiplyExact(one_hour, Total_Days);
+        int total_milisecond = Math.multiplyExact(One_milisecond, Total_Minutes);
+
+
+
         System.out.println(Total_Minutes);
-        System.out.println(Total_Days);
+        System.out.println(total_milisecond);
 
 
 
